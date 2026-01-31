@@ -30,3 +30,40 @@ Algorithm
  Code Snippets
  
 <img width="1920" height="1080" alt="Screenshot (43)" src="https://github.com/user-attachments/assets/8b3174c2-9a20-47dc-a81e-1285cc47df4f" />
+
+
+
+# python-daily-challange
+# python-assignment-2
+The goal is to create a program that checks student details before approving their account. The program uses only:
+strings
+Conditional statements Problem Statement The program takes four inputs:
+Student ID
+Email ID
+Password
+Referral Code 
+It checks if these inputs follow the university rules. If all are valid → it prints APPROVED If any rule fails → it prints REJECTED
+Validation Rules Student ID
+
+Format: CSE-XXX
+Must start with "CSE"
+4th character must be "-"
+Last 3 characters must be digits
+Example: CSE-245 → Valid, cse-245 → Invalid Email ID
+Must contain @ and .
+@ cannot be the first or last character
+Must end with .edu
+Example: student@univ.edu → Valid, student@gmail.com → Invalid Password
+Must be at least 8 characters long
+First character must be uppercase
+Must contain at least one digit
+Example: Aman1234 → Valid, amanabcd → Invalid Referral Code
+Format: REF##@
+Must start with "REF"
+Next 2 characters must be digits
+Last character must be @
+Example: REF45@ → Valid, RE45@ → Invalid
+ Code Snippets
+ <img width="1920" height="1080" alt="Screenshot (44)" src="https://github.com/user-attachments/assets/8cdcfad5-cdb0-482a-ac10-4a9f95be38f1" />
+
+
