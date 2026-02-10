@@ -66,4 +66,40 @@ Example: REF45@ → Valid, RE45@ → Invalid
  Code Snippets
  <img width="1920" height="1080" alt="Screenshot (44)" src="https://github.com/user-attachments/assets/8cdcfad5-cdb0-482a-ac10-4a9f95be38f1" />
 
+# python-daily-challange
+# python-assignment-3
+## Code2Xplore – 60 Days Challenge (Day‑3)
+  Goal
+    The goal is to create a program that checks student marks and classifies them into grades, while also counting valid and failed students.
+    Inputs
+The program takes:
+  - Number of subjects (m)
+  - Marks of each subject<img width="1920" height="1080" alt="Screenshot (46)" src="https://github.com/user-attachments/assets/7caccdc0-e38f-47a6-bb03-e399563a5449" />
+
+  - A fixed username ("bhanu")
+
+Logic
+  - If the username length is >5, each student’s mark is increased by 1.
+  - If the username length is <=5 each student’s mark is decreased by 1.
+Since "bhanu" has only 4 characters, all marks are reduced by 2.
+  
+Validation Rules (Grading)
+
+  - 91–100 → Excellent
+  - 76–89 → Very Good
+  - 61–74 → Good
+  - 41–59 → Average
+  - 0–39 → Fail
+  - Marks outside 0–100 → Invalid
+
+Counters
+  - valid → counts all students whose marks fall into valid ranges (0–100).
+  - fail → counts students who fall into the Fail category.
+
+Output
+  - Prints each student’s adjusted mark with its grade.
+  - Prints total valid students.
+  - Prints total failed students.
+
+
 
