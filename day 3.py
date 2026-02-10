@@ -3,6 +3,11 @@ n=int(input("enter no.of students:"))
 m=[0]*n
 for i in range(n):
     m[i]=int(input("enter marks:"))
+    name="bhanu"
+    if len(name)<=5:
+        m[i]-=1
+    else:
+        m[i]+=1
 totalvalidstudents=0
 totalfailstudents=0
 for i in range(n):
@@ -25,4 +30,5 @@ for i in range(n):
 
 
 print("total valid students are :",totalvalidstudents)
+
 print("total fail students are:",totalfailstudents)
