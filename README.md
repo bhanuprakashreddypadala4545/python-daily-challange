@@ -102,4 +102,45 @@ Output
   - Prints total failed students.
 
 
+    
+# python-daily-challange
+# python-assignment-4
+Cyber Activity Risk Analyzer
+This project is a Python program developed to analyze student login activity intensity scores and detect suspicious behavior.
+The program processes a list of integer activity scores, categorizes them into risk levels, and applies a personalized security filter based on the last digit of the register number.
+Project Objective
+The main objectives of this project are:
+Clean invalid data
+Categorize activity scores into risk levels
+Apply a personalized filtering rule
+Generate a final security report
+Each student’s output is different because it depends on the last digit of their register number.
+Risk Categorization Rules
+For each activity score:
+If score is less than 0 → Ignored (Invalid Data)
+0 to 30 → Low Risk
+31 to 60 → Medium Risk
+61 to 100 → High Risk
+Greater than 100 → Critical Risk
+The program creates four separate lists:
+low_risk
+medium_risk
+high_risk
+critical_risk
+Personalized Security Filter
+Let D be the last digit of my register number.
+If D is even, all Low Risk scores are removed after categorization.
+If D is odd, all Critical Risk scores are removed after categorization.
+This makes each student’s implementation unique.
+Additional Features
+Counts total valid entries
+Counts ignored entries
+Counts entries removed due to personalization
+Displays final categorized lists after filtering
+Concepts Used
+Lists
+For loop
+Conditional statements
+Basic data validation
+This project strictly follows all given constraints and avoids using list comprehension, dictionaries, filter functions, and built-in sum, max, or min functions.
 
