@@ -144,3 +144,28 @@ Conditional statements
 Basic data validation
 This project strictly follows all given constraints and avoids using list comprehension, dictionaries, filter functions, and built-in sum, max, or min functions.
 
+
+
+    
+# python-daily-challange
+# python-assignment-5
+Demand Categorization System
+Problem
+
+This program takes integer values (requests) from the user and categorizes them into different demand levels. It also removes some values based on a personalization rule using the length of a name.
+
+Categories
+
+Invalid Demand: Negative values
+No Demand: Value equal to 0
+Low Demand: 1 to 20
+Moderate Demand: 21 to 50
+High Demand: Above 50
+
+How It Works
+
+The program first takes the number of inputs and then reads all values. Each value is checked and placed into the correct category. Valid values are counted, and negative values are treated as invalid. Then, the length of a given name is calculated and a personalization value is found using length mod 3. If result is 0, low demand values are removed. If result is 1, high demand values are removed. If result is 2, both low and high demand values are removed.
+
+Output
+
+The program displays the name length, personalization value, total valid requests, number of removed requests, and the final categorized lists.
