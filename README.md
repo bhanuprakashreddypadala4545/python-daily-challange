@@ -145,3 +145,83 @@ The program first takes the number of inputs and then reads all values. Each val
 Output
 
 The program displays the name length, personalization value, total valid requests, number of removed requests, and the final categorized lists.
+
+
+# python-daily-challange
+# python-assignment-5
+Problem Overview
+This program analyzes transaction amounts entered by the user.
+It identifies risky spending patterns based on frequency and total amount.
+Transactions are grouped into categories for better analysis.
+Objective
+Accept multiple transaction values
+Classify transactions into categories
+Detect spending patterns
+Calculate total and frequency
+Assign a final risk level
+Provide a summary using a tuple
+How the Program Works
+The user enters the number of transactions and their values.
+All values are stored in a list.
+Using list comprehension, transactions are classified into:
+invalid (≤ 0)
+normal (1–500)
+large (501–2000)
+high risk (> 2000)
+A separate list is created for valid transactions (greater than 0).
+A loop is used to calculate total spending.
+Conditions are used to detect:
+frequent transactions
+large spending
+suspicious patterns
+Risk Classification Logic
+The program uses three factors:
+number of valid transactions (freq)
+total transaction value (total)
+number of high-risk transactions
+Decision Rules
+High Risk
+
+freq > 4 AND total > 3000
+Moderate Risk
+
+freq > 3 OR total > 2500 OR high-risk transactions ≥ 3
+Low Risk
+
+when none of the above conditions are satisfied
+Output
+Categorized transactions:
+Invalid
+Normal
+Large
+High Risk
+Pattern detection:
+Frequent Transactions
+Large Spending
+Suspicious Pattern
+Total transaction value
+Number of transactions
+Final Risk Classification
+Summary tuple:
+(total transactions, valid transactions, total amount, risk)
+My Approach / Logic Decisions
+I separated classification and analysis to keep the code simple.
+I considered only positive values as valid transactions.
+I used both frequency and total amount to determine risk level.
+I used list comprehension for cleaner classification.
+Reflection
+This program helped me understand how multiple conditions affect decision making.
+Combining frequency and amount gives better results than using a single factor.
+The logic can be extended for real-world fraud detection systems.
+Concepts Used
+Lists
+
+Loops (for)
+
+Conditional statements (if-elif)
+
+List comprehension
+
+Dictionary
+
+Tuple
