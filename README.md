@@ -313,7 +313,7 @@ Dictionary
 
 Tuple
 
-Screenshot (23)
+
 
 
 
@@ -410,5 +410,4 @@ I learned how to use NumPy and Pandas.
 I understood how to analyze data step by step.
 I learned classification using conditions.
 I learned manual calculation of mean.
-Output Screenshot
-Screenshot (54)
+
