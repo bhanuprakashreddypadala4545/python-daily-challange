@@ -68,7 +68,7 @@ Example: REF45@ → Valid, RE45@ → Invalid
 
 # python-daily-challange
 # python-assignment-3
-## Code2Xplore – 60 Days Challenge (Day‑3)
+
   Goal
     The goal is to create a program that checks student marks and classifies them into grades, while also counting valid and failed students.
     Inputs
@@ -105,50 +105,94 @@ Output
     
 # python-daily-challange
 # python-assignment-4Problem
-This program takes integer values (requests) from the user and categorizes them into different demand levels. It also removes some values based on a personalization rule using the length of a name.
-Categories
-Invalid Demand: Negative values
-No Demand: Value equal to 0
-Low Demand: 1 to 20
-Moderate Demand: 21 to 50
-High Demand: Above 50
-How It Works
-The program first takes the number of inputs and then reads all values. Each value is checked and placed into the correct category. Valid values are counted, and negative values are treated as invalid. Then, the length of a given name is calculated and a personalization value is found using length mod 3.
-If result is 0, low demand values are removed
-If result is 1, high demand values are removed
-If result is 2, both low and high demand values are removed
+Activity Score Risk Categorization Program
+Goal
+The goal is to create a program that checks a student’s activity scores and classifies them into risk categories, while also counting valid, ignored, and filtered scores.
+Inputs
+The program takes:
+
+Number of activity scores (m)
+Activity scores (one score at a time)
+A registration number (used for personalized filtering)
+Logic
+For each score:
+
+If the score is negative, it is ignored.
+
+Scores are classified as follows:
+
+0–30 → Low Risk
+31–60 → Medium Risk
+61–100 → High Risk
+100 → Critical Risk
+
+Personalized filtering based on the last digit (D) of the registration number:
+
+If D is even, all Low Risk scores are removed.
+If D is odd, all Critical Risk scores are removed.
+Counters
+valid → counts all scores in the valid range (≥0)
+ignored → counts all negative scores
+removed → counts the scores removed due to the personalized filtering
 Output
-The program displays the name length, personalization value, total valid requests, number of removed requests, and the final categorized lists.
+Prints the last digit of the registration number (D)
+Shows risk categories before and after filtering
+Prints total valid scores, total ignored scores, and total removed scores
 
 
 
     
 # python-daily-challange
 # python-assignment-5
-Demand Categorization System
-Problem
+Demand Classification and Personalized Filtering Program
+Goal
+Create a program to analyze demand requests.
 
-This program takes integer values (requests) from the user and categorizes them into different demand levels. It also removes some values based on a personalization rule using the length of a name.
+Classify requests into demand categories.
 
-Categories
+Apply personalized filtering based on a computed index.
 
-Invalid Demand: Negative values
-No Demand: Value equal to 0
-Low Demand: 1 to 20
-Moderate Demand: 21 to 50
-High Demand: Above 50
+Count valid and removed requests.
 
-How It Works
-
-The program first takes the number of inputs and then reads all values. Each value is checked and placed into the correct category. Valid values are counted, and negative values are treated as invalid. Then, the length of a given name is calculated and a personalization value is found using length mod 3. If result is 0, low demand values are removed. If result is 1, high demand values are removed. If result is 2, both low and high demand values are removed.
-
+Inputs
+Number of requests (m).
+Demand values entered one by one.
+A predefined name used to calculate the personalization index.
+Logic
+For each demand value:
+If the value is negative, it is treated as an invalid request.
+If the value is zero, it is counted as no demand.
+Requests are classified as:
+1 to 20 → Low Demand
+21 to 50 → Moderate Demand
+Greater than 50 → High Demand
+Personalization Rule (PLI)
+Count the number of characters in the name excluding spaces.
+Compute:
+PLI = length mod 3
+Apply filtering as follows:
+If PLI equals 0, remove all Low Demand requests.
+If PLI equals 1, remove all High Demand requests.
+If PLI equals 2, remove both Low and High Demand requests.
+Counters
+valid: counts all non-negative requests.
+removed: counts requests removed due to filtering.
+invalid requests are tracked separately.
 Output
+Length of the name.
+Personalization index (PLI).
+Total valid requests.
+Number of removed requests.
+Demand categories after filtering:
+Low Demand
+Moderate Demand
+High Demand
 
-The program displays the name length, personalization value, total valid requests, number of removed requests, and the final categorized lists.
 
 
 # python-daily-challange
-# python-assignment-5
+# python-assignment-6
+Transaction Risk Analysis Program
 Problem Overview
 This program analyzes transaction amounts entered by the user.
 It identifies risky spending patterns based on frequency and total amount.
@@ -233,3 +277,100 @@ Tuple
 
 
 
+
+
+
+# python-daily-challange
+# python-assignment-8
+Multi-Dimensional Academic Intelligence System
+Problem Overview
+This program analyzes student performance.
+It uses marks, attendance, and assignment scores.
+It classifies students into categories.
+It gives overall class performance.
+Objective
+Generate student data using random values
+Store data using list, tuple, and dictionary
+Convert data into DataFrame using Pandas
+Use NumPy for calculations
+Classify students into categories
+Detect patterns in data
+Provide final system result
+Return summary using a tuple
+How the Program Works
+The program generates n students based on roll number.
+Each student has:
+marks (0–100)
+attendance (0–100)
+assignment (0–50)
+Data is stored in a list as tuples.
+Data is converted into a DataFrame.
+Classification is done using conditions.
+Analysis is done using NumPy and manual calculation.
+Student Classification Logic
+At Risk
+marks < 40 OR attendance < 50
+Average
+marks between 40 and 70
+Good
+marks between 71 and 90
+Top Performer
+marks > 90 AND attendance > 80
+Analysis Performed
+Mean (calculated manually)
+Median (NumPy)
+Standard Deviation (NumPy)
+Correlation (Marks vs Attendance)
+Normalization of marks
+Pattern Detection
+Consistency
+standard deviation < 15
+Attendance Risk
+more than 3 students with attendance < 50
+High Achievement
+at least 2 top performers
+Performance Index Formula
+performance_index = (marks * 0.6 + assignment * 0.4) * log(attendance + 1)
+
+Output
+DataFrame (table format)
+Student category dictionary
+Unique categories (set)
+Statistical values:
+mean
+median
+standard deviation
+correlation
+Final system insight:
+Stable Academic System
+Moderate Performance
+Critical Attention Required
+Summary tuple:
+(mean, std_dev, max_marks)
+Personalization Applied
+Last digit of Register Number = 6
+Hence, n = 6 students generated
+My Approach / Logic Decisions
+I used three functions:
+generate_data()
+classify_students()
+analyze_data()
+I used random values to simulate data.
+I used conditions to classify students.
+I calculated mean manually.
+Concepts Used
+Lists
+Tuples
+Dictionary
+Set
+Functions
+List comprehension
+NumPy
+Pandas
+Random module
+Math module
+Reflection
+I learned how to use NumPy and Pandas.
+I understood how to analyze data step by step.
+I learned classification using conditions.
+I learned manual calculation of mean.
